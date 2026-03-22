@@ -1,0 +1,226 @@
+{
+  "algorithm": "HistGradientBoostingClassifier (XGBoost hist equivalent)",
+  "dataset": "features.csv \u2014 real CMS claims 2015\u20132023",
+  "n_rows_total": 58066,
+  "n_features": 39,
+  "feature_names": [
+    "BENE_ID",
+    "NCH_PRMRY_PYR_CLM_PD_AMT",
+    "PRVDR_STATE_CD",
+    "CLM_TOT_CHRG_AMT",
+    "CLM_IP_ADMSN_TYPE_CD",
+    "CLM_SRC_IP_ADMSN_CD",
+    "NCH_BENE_IP_DDCTBL_AMT",
+    "NCH_BENE_PTA_COINSRNC_LBLTY_AM",
+    "NCH_IP_NCVRD_CHRG_AMT",
+    "CLM_UTLZTN_DAY_CNT",
+    "BENE_TOT_COINSRNC_DAYS_CNT",
+    "CLM_DRG_OUTLIER_STAY_CD",
+    "CLM_LINE_NUM",
+    "REV_CNTR_DDCTBL_COINSRNC_CD",
+    "LOS_DAYS",
+    "CC_CHF",
+    "CC_CKD",
+    "CC_COPD",
+    "CC_DIABETES",
+    "CC_ALZHEIMERS",
+    "CC_COUNT",
+    "AGE",
+    "DUAL_ELIGIBLE",
+    "MALE",
+    "ADMIT_QUARTER",
+    "ADMIT_DOW",
+    "MONTH_SIN",
+    "MONTH_COS",
+    "LOS_CAT",
+    "CHF_CKD",
+    "FRAILTY_SCORE",
+    "SOCIAL_RISK",
+    "WEEKEND_ADMIT",
+    "PRIOR_12M_ADMITS",
+    "HIGH_PRIOR_USE",
+    "COST_TIER",
+    "DRG_Infectious",
+    "DRG_Other",
+    "REV_CNTR_IS_450"
+  ],
+  "train_years": "2015\u20132021",
+  "val_year": 2022,
+  "test_year": 2023,
+  "n_train": 45605,
+  "n_val": 10598,
+  "n_test": 1863,
+  "target": "READMIT_30DAY",
+  "base_rate_train": 0.5701,
+  "base_rate_test": 0.525,
+  "n_iterations": 600,
+  "hyperparameters": {
+    "learning_rate": 0.03,
+    "max_depth": 5,
+    "max_leaf_nodes": 31,
+    "min_samples_leaf": 30,
+    "l2_regularization": 0.3,
+    "max_features": 0.8,
+    "max_iter": 600
+  },
+  "test_metrics": {
+    "AUC_ROC": 0.9471,
+    "AUC_PR": 0.9348,
+    "Brier": 0.0821
+  },
+  "youden_threshold": 0.5912,
+  "clinical_threshold": 0.4,
+  "threshold_metrics_youden": {
+    "label": "Youden's J",
+    "threshold": 0.5912,
+    "AUC_ROC": 0.9471,
+    "AUC_PR": 0.9348,
+    "Brier": 0.0821,
+    "F1": 0.8995,
+    "Sensitivity": 0.9243,
+    "Specificity": 0.8554,
+    "PPV": 0.876,
+    "NPV": 0.911,
+    "TP": 904,
+    "FP": 128,
+    "TN": 757,
+    "FN": 74
+  },
+  "threshold_metrics_clinical": {
+    "label": "Clinical (0.40)",
+    "threshold": 0.4,
+    "AUC_ROC": 0.9471,
+    "AUC_PR": 0.9348,
+    "Brier": 0.0821,
+    "F1": 0.903,
+    "Sensitivity": 0.9611,
+    "Specificity": 0.8147,
+    "PPV": 0.8514,
+    "NPV": 0.9499,
+    "TP": 940,
+    "FP": 164,
+    "TN": 721,
+    "FN": 38
+  },
+  "top_features": [
+    {
+      "feature": "LOS_DAYS",
+      "mean": 0.18976881217288846,
+      "std": 0.010477060394033734
+    },
+    {
+      "feature": "CLM_TOT_CHRG_AMT",
+      "mean": 0.04403159528458487,
+      "std": 0.004672625551029474
+    },
+    {
+      "feature": "CLM_LINE_NUM",
+      "mean": 0.029828351799860712,
+      "std": 0.0018561219803005823
+    },
+    {
+      "feature": "PRIOR_12M_ADMITS",
+      "mean": 0.019657974497321637,
+      "std": 0.003846681295387895
+    },
+    {
+      "feature": "CLM_UTLZTN_DAY_CNT",
+      "mean": 0.01213368302273375,
+      "std": 0.001256645142134021
+    },
+    {
+      "feature": "AGE",
+      "mean": 0.0030155704212063927,
+      "std": 0.00106221718480215
+    },
+    {
+      "feature": "CLM_IP_ADMSN_TYPE_CD",
+      "mean": 0.0009767425739143575,
+      "std": 0.0002729304506338547
+    },
+    {
+      "feature": "CC_DIABETES",
+      "mean": 0.0009321456217579109,
+      "std": 0.0006644173165442221
+    },
+    {
+      "feature": "NCH_BENE_PTA_COINSRNC_LBLTY_AM",
+      "mean": 0.0008455705367425903,
+      "std": 0.00038208925737959757
+    },
+    {
+      "feature": "CC_COUNT",
+      "mean": 0.0006388378604248012,
+      "std": 0.0004958904084105951
+    },
+    {
+      "feature": "NCH_BENE_IP_DDCTBL_AMT",
+      "mean": 0.00034491390631575435,
+      "std": 0.00015933260629800297
+    },
+    {
+      "feature": "COST_TIER",
+      "mean": 0.000304630303590588,
+      "std": 0.00014693040508677825
+    },
+    {
+      "feature": "LOS_CAT",
+      "mean": 0.0002172849776053661,
+      "std": 7.722386949999352e-05
+    },
+    {
+      "feature": "ADMIT_DOW",
+      "mean": 0.0001044446755168682,
+      "std": 0.00026421504035976245
+    },
+    {
+      "feature": "REV_CNTR_IS_450",
+      "mean": 9.751250678792603e-05,
+      "std": 9.302278990109246e-05
+    }
+  ],
+  "risk_tiers": [
+    {
+      "TIER": "Low",
+      "N": 749,
+      "Avg_Score": 0.059670565734051904,
+      "Obs_Rate": 0.044058744993324434
+    },
+    {
+      "TIER": "Moderate",
+      "N": 64,
+      "Avg_Score": 0.4667046257297345,
+      "Obs_Rate": 0.546875
+    },
+    {
+      "TIER": "High",
+      "N": 108,
+      "Avg_Score": 0.6432700224592394,
+      "Obs_Rate": 0.5833333333333334
+    },
+    {
+      "TIER": "Critical",
+      "N": 942,
+      "Avg_Score": 0.928802603269546,
+      "Obs_Rate": 0.8991507430997877
+    }
+  ],
+  "tier_thresholds": {
+    "Low": [
+      0.0,
+      0.35
+    ],
+    "Moderate": [
+      0.35,
+      0.55
+    ],
+    "High": [
+      0.55,
+      0.72
+    ],
+    "Critical": [
+      0.72,
+      1.01
+    ]
+  }
+}
