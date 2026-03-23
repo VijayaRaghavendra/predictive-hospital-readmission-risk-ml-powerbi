@@ -626,7 +626,7 @@ python 05_export_powerbi.py
 
 | Platform | Link |
 |----------|------|
-| 💼 LinkedIn | [linkedin.com/in/vijayaraghavendra](www.linkedin.com/in/vijayaraghavendraadusumilli) |
+| 💼 LinkedIn | [linkedin.com/in/vijayaraghavendraadusumilli](www.linkedin.com/in/vijayaraghavendraadusumilli) |
 | 🐙 GitHub | [github.com/VijayaRaghavendra](https://github.com/VijayaRaghavendra) |
 | 📧 Email | *(vijayraghavendra300@gmail.com)* |
 
